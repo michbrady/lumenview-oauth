@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>LumenView OAuth Relay</title></head>
+<body>
+<script>
+  // Facebook appends the token to the fragment after the redirect.
+  // Immediately bounce it to the app's custom scheme so Android
+  // routes back to LumenView and fires Application.deepLinkActivated.
+  var fragment = window.location.hash || window.location.search;
+  window.location.replace("fb2073919780188790://authorize" + fragment);
+</script>
+<p>Redirecting back to LumenView...</p>
+</body>
+</html>
